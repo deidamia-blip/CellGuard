@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portafolio digital del proyecto CellGuard del C.E.D. Miguela Rodríguez Araujo.">
+<title>CellGuard | Portafolio del proyecto</title>
+<style>
+:root{
+  --navy:#102a56;--blue:#1769d2;--blue2:#2f80ed;--sky:#eaf3ff;
+  --ink:#172b4d;--muted:#53657e;--white:#fff;--bg:#f5f8fc;
+  --line:#d8e3f0;--shadow:0 12px 30px rgba(16,42,86,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:var(--blue);font-weight:700}
+a:focus-visible,button:focus-visible{outline:3px solid #ffbf47;outline-offset:3px}
+.container{width:min(1120px,91%);margin:auto}
+header{background:var(--navy);color:var(--white);position:sticky;top:0;z-index:10;box-shadow:0 4px 16px #071a3540}
+.navbar{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:12px 0}
+.brand{font-size:1.45rem;font-weight:800;letter-spacing:.4px;color:#fff;text-decoration:none}
+.brand span{color:#8fc5ff}
+nav{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;padding:9px 11px;border-radius:7px;font-size:.92rem}
+nav a:hover,nav a:focus{background:#28518a;color:#fff}
+.hero{background:linear-gradient(130deg,#102a56,#1769d2);color:#fff;padding:78px 0 72px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:42px;align-items:center}
+.eyebrow{color:#b9dcff;text-transform:uppercase;letter-spacing:2px;font-size:.78rem;font-weight:800}
+h1{font-size:clamp(2.25rem,5vw,3.65rem);line-height:1.12;margin:14px 0 18px}
+.hero p{color:#e4efff;max-width:700px;font-size:1.08rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{display:inline-block;padding:12px 19px;border-radius:8px;background:#fff;color:var(--navy);text-decoration:none;font-weight:800}
+.btn.secondary{background:transparent;color:#fff;border:1px solid #c9e2ff}
+.hero-panel{background:#fff;color:var(--ink);padding:28px;border-radius:18px;box-shadow:var(--shadow);text-align:center}
+.hero-panel .phone{font-size:3.5rem}
+.hero-panel h2{font-size:1.25rem;color:var(--navy);margin:8px 0}
+.hero-panel p{color:var(--muted);font-size:.95rem}
+.hero-panel strong{color:var(--blue);font-size:1.5rem}
+section{padding:65px 0;scroll-margin-top:90px}
+section.alt{background:var(--sky)}
+.section-head{text-align:center;max-width:760px;margin:0 auto 34px}
+.section-head h2{font-size:clamp(1.7rem,3vw,2.35rem);color:var(--navy);margin-bottom:8px}
+.section-head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:24px;box-shadow:var(--shadow)}
+.card .icon{font-size:1.9rem}
+.card h3{color:var(--blue);margin:8px 0}
+.card p,.card li{color:var(--muted);font-size:.96rem}
+.card ul{padding-left:20px;margin-top:8px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.info-box{background:#fff;border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:10px;padding:22px}
+.info-box h3{color:var(--navy);margin-bottom:8px}
+.info-box p{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:12px;text-align:center;padding:22px}
+.stat strong{display:block;color:var(--blue);font-size:2rem}
+.stat span{font-size:.9rem;color:var(--muted)}
+ul.clean{padding-left:21px}
+ul.clean li{margin:9px 0;color:var(--muted)}
+.objective{background:#fff;padding:18px 20px;border-radius:10px;border:1px solid var(--line);margin:11px 0;color:var(--muted)}
+.objective strong{color:var(--navy)}
+.specs{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.specs th,.specs td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.specs th{background:var(--navy);color:#fff}
+.specs td{color:var(--muted)}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.year{background:#fff;border:1px solid var(--line);border-top:5px solid var(--blue);border-radius:12px;padding:23px}
+.year .tag{font-size:.78rem;font-weight:800;color:var(--blue);text-transform:uppercase}
+.year h3{color:var(--navy);margin:7px 0}
+.year p,.year li{color:var(--muted);font-size:.94rem}
+.year ul{padding-left:19px;margin-top:9px}
+.link-card{display:block;text-decoration:none;background:var(--navy);color:#fff;padding:23px;border-radius:12px;margin-top:25px}
+.link-card:hover{background:#19427d}
+.link-card span{display:block;color:#d8eaff;font-weight:400;margin-top:4px}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.person{background:#fff;border:1px solid var(--line);padding:22px;border-radius:12px}
+.person h3{color:var(--navy);font-size:1.05rem}
+.person p{color:var(--muted);font-size:.92rem}
+.note{font-size:.88rem;color:var(--muted);margin-top:15px}
+footer{background:#0b1e3d;color:#fff;text-align:center;padding:28px 15px}
+footer p{color:#c8d8ed;font-size:.9rem;margin-top:5px}
+@media(max-width:850px){.hero-grid,.two-col{grid-template-columns:1fr}.grid,.timeline,.team{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.navbar{justify-content:center}.navbar nav{justify-content:center}nav a{font-size:.84rem;padding:8px}.hero{padding:55px 0}.grid,.timeline,.team,.stats{grid-template-columns:1fr}section{padding:48px 0}.specs{font-size:.88rem}.specs th,.specs td{padding:10px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <a class="brand" href="#inicio">CELL<span>GUARD</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#proyecto">Proyecto</a>
+      <a href="#problema">Problema</a>
+      <a href="#solucion">Solución</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="#viabilidad">Viabilidad</a>
+      <a href="#etapas">Etapas</a>
+      <a href="#equipo">Equipo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Proyecto de Promoción · 1.º BATÍN</div>
+      <h1>CellGuard: almacenamiento seguro y control organizado de celulares</h1>
+      <p>Propuesta de un sistema de almacenamiento compartimentado para proteger los dispositivos móviles de los estudiantes y una aplicación complementaria para registrar la entrega dentro de la institución.</p>
+      <div class="actions">
+        <a class="btn" href="#proyecto">Conocer el proyecto</a>
+        <a class="btn secondary" href="Etapa1.html">Ver primera etapa</a>
+      </div>
+  </div>
+    <article class="hero-panel">
+      <div class="phone">📱</div>
+      <h2>Capacidad prevista por caja</h2>
+      <strong>30 celulares</strong>
+      <p>Compartimentos individuales, puerta frontal y acceso con lector de huellas digitales previsto.</p>
+      <h2>Aplicación para el registro de celulares</h2>
+      <p>Facilitara el registro de los celulares 
+	por medio de una lista de cada curso, 
+	que vendra dentro de la aplicación, 
+	para poder clasificar cada entrega.</p>
+    </article>
+  </div>
+</section>
+
+<section id="proyecto">
+  <div class="container">
+    <div class="section-head"><h2>Acerca del proyecto</h2><p>Una propuesta tecnológica que responde a dos necesidades detectadas en la institución.</p></div>
+    <div class="grid">
+      <article class="card"><div class="icon">🧰</div><h3>Sistema físico</h3><p>Diseño de cajas de plástico resistente con espacios individuales para evitar que los celulares queden apilados y entren en contacto entre sí.</p></article>
+      <article class="card"><div class="icon">💻</div><h3>Aplicación de registro</h3><p>Herramienta digital prevista para organizar a los alumnos por curso y registrar diariamente la asistencia y la entrega o no entrega de sus celulares.</p></article>
+      <article class="card"><div class="icon">🎯</div><h3>Finalidad</h3><p>Mejorar la protección de los dispositivos y facilitar el control de las entregas, reduciendo la dependencia del registro manual.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="problema">
+  <div class="container">
+    <div class="section-head"><h2>Problema identificado</h2><p>El diagnóstico se centró en el almacenamiento de los celulares y en el procedimiento utilizado para registrar su entrega.</p></div>
+    <div class="two-col">
+      <div class="info-box"><h3>Almacenamiento inadecuado</h3><p>Los celulares se colocan encimados en una caja común. El contacto y la fricción entre dispositivos pueden favorecer rayaduras, roturas de pantallas y otros daños. El documento también señala preocupación por el deterioro de las baterías.</p></div>
+      <div class="info-box"><h3>Registro manual</h3><p>Las coordinadoras deben recorrer los cursos para verificar quién entrega su celular y quién no. Este procedimiento requiere tiempo y puede interrumpir las actividades escolares.</p></div>
+    </div>
+    </section>
+
+<section id="solucion">
+  <div class="container">
+    <div class="section-head"><h2>Propuesta de solución</h2><p>Dos componentes que se complementan para organizar el resguardo y el registro de los dispositivos.</p></div>
+    <div class="two-col">
+      <article class="card">
+        <div class="icon">🔐</div><h3>1. Caja compartimentada</h3>
+        <ul class="clean">
+          <li>Capacidad prevista de 30 celulares por caja.</li>
+          <li>Compartimentos individuales para separar los dispositivos.</li>
+          <li>Estructura de un material resistente con puerta frontal.</li>
+          <li>Espacio previsto para lector de huellas digitales y cerradura electrónica.</li>
+          <li>Se proyectan seis cajas para los cursos contemplados.</li>
+        </ul>
+        <p class="note">La incorporación funcional del sistema biométrico se evaluará según su viabilidad técnica y económica.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🗂️</div><h3>2. Aplicación de registro</h3>
+        <ul class="clean">
+          <li>Lista de alumnos organizada por los seis cursos de la institución.</li>
+          <li>Registro diario de asistencia.</li>
+          <li>Control de entrega y no entrega de celulares.</li>
+          <li>Clasificación de alumnos presentes, ausentes y presentes que no entregaron el dispositivo.</li>
+          <li>Reportes semanales sobre la frecuencia de entrega.</li>
+        </ul>
+        <p class="note">La aplicación se encuentra planificada; su desarrollo está previsto para una etapa posterior.</p>
+      </article>
+    </div>
+    <div class="info-box" style="margin-top:22px">
+      <h3>Capacidad global prevista</h3>
+      <p>El anteproyecto contempla seis cajas de 30 compartimentos cada una, lo que representa una capacidad proyectada de hasta <strong>180 celulares</strong> en total.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="objetivos">
+  <div class="container">
+    <div class="section-head"><h2>Objetivos Generales del proyecto</h2><p>Los objetivos reúnen el diseño del sistema físico  y la organización de su desarrollo.</p></div>
+    <div class="objective"><strong>Objetivo general del sistema fisico:</strong> Diseñar e implementar un sistema de almacenamiento compartimentado para dispositivos móviles que garantice la integridad física y funcional de los celulares de los estudiantes, mitigando los daños por presión, compresión y degradación térmica durante la jornada escolar.</div>
+     <div class="objective"><strong>Objetivo general de la aplicación:</strong> Desarrollar una aplicación de registro y control de entrega de celulares que permita gestionar la lista de alumnos por curso, registrar su asistencia y controlar la frecuencia de entrega de sus dispositivos, identificando las inasistencias y los días en que estuvieron presentes sin entregar sus celulares.</div>
+    </div>
+</section>
+
+<section id="viabilidad">
+  <div class="container">
+    <div class="section-head"><h2>Viabilidad y presupuesto preliminar</h2><p>La propuesta se planifica de manera progresiva, de acuerdo con los recursos y conocimientos disponibles.</p></div>
+    <div class="grid">
+      <article class="card"><h3>Viabilidad técnica</h3><p>Se prevé utilizar plástico resistente, herramientas de corte y ensamblaje, y componentes electrónicos. Para la aplicación se consideran HTML, CSS, Githut y una base de datos. La implementación dependerá de pruebas y compatibilidad.</p></article>
+      <article class="card"><h3>Viabilidad legal</h3><p>El anteproyecto considera que la propuesta no presenta inconvenientes legales identificados y que busca contribuir a la seguridad de los dispositivos dentro del ámbito escolar.</p></article>
+      <article class="card"><h3>Viabilidad económica</h3><p>Se analizaron costos de fabricación, componentes electrónicos y servicios web. Los valores son referencias iniciales y pueden variar según proveedores y necesidades.</p></article>
+    </div>
+    <div style="overflow-x:auto;margin-top:24px">
+      <table class="specs">
+        <thead><tr><th>Concepto</th><th>Costo estimado</th><th>Observación</th></tr></thead>
+        <tbody>
+          <tr><td>Fabricación de una caja</td><td>Gs. 1.000.000</td><td>Estructura, separadores y puerta, según cotización consultada a Polypar.</td></tr>
+          <tr><td>Seis cajas</td><td>Gs. 6.000.000</td><td>Capacidad prevista de 30 celulares por caja.</td></tr>
+          <tr><td>Dominio web (.com.py)</td><td>Gs. 150.000 anuales</td><td>Estimación de referencia del anteproyecto.</td></tr>
+          <tr><td>Alojamiento web (hosting)</td><td>Gs. 330.000 anuales</td><td>Estimación de referencia mediante contratación anual.</td></tr>
+          <tr><td><strong>Total preliminar</strong></td><td><strong>Gs. 6.480.000</strong></td><td>Incluye seis cajas, un año de dominio y hosting. No incluye lectores, electrónica, instalación ni mantenimiento, de igual forma el equipo estará consultando otros costos y formas para que el presupuesto sea menor.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Los importes corresponden a las estimaciones incluidas en el anteproyecto y no constituyen una cotización vigente confirmada.</p>
+  </div>
+</section>
+
+<section class="alt" id="etapas">
+  <div class="container">
+    <div class="section-head"><h2>Desarrollo previsto en tres años</h2><p>El proyecto avanzará desde la investigación y planificación hasta la construcción y evaluación.</p></div>
+    <div class="timeline">
+      <article class="year"><div class="tag">1.º año · Etapa actual</div><h3>Diagnóstico y planificación</h3><p>Identificación del problema, consulta a estudiantes, investigación de materiales, análisis de viabilidad, diseño conceptual y elaboración del anteproyecto.</p><ul><li>Diseño inicial de la caja.</li><li>Planificación de la aplicación.</li><li>Creación del portafolio web.</li></ul><a href="Etapa1.html">Consultar el desarrollo de la primera etapa →</a></article>
+      <article class="year"><div class="tag">2.º año · Etapa prevista</div><h3>Diseño detallado y construcción</h3><p>Ajuste del diseño, selección de materiales y elaboración de la estructura física.</p><ul><li>Construcción del prototipo.</li><li>Organización de compartimentos.</li><li>Desarrollo de la aplicación.</li><li>Registro fotográfico de avances.</li></ul></article>
+      <article class="year"><div class="tag">3.º año · Etapa prevista</div><h3>Evaluación y mejora final</h3><p>Pruebas del sistema, corrección de fallas y preparación de la presentación final.</p><ul><li>Evaluación de capacidad y seguridad.</li><li>Incorporación del lector biométrico si resulta viable.</li><li>Reportes semanales y mejoras.</li><li>Documentación de resultados.</li></ul></article>
+    </div>
+    <p class="note">Las actividades del segundo y tercer año son una planificación futura, no avances ya realizados.</p>
+  </div>
+</section>
+
+<section id="equipo">
+  <div class="container">
+    <div class="section-head"><h2>Equipo de trabajo</h2>
+    <div class="team">
+      <article class="person"><h3>Irene Deidamia Muñoz Alfonzo</h3><p>Responsable del desarrollo y mantenimiento del sitio web en HTML y CSS.</p></article>
+      <article class="person"><h3>Antonella Belén Núñez Adorno</h3><p>Responsable de la elaboración y organización del anteproyecto escrito.</p></article>
+      <article class="person"><h3>Antonella Noemí Cañete Velázquez</h3><p>Responsable de la elaboración y organización de la presentación del proyecto.</p></article>
+    </div>
+    <a class="link-card" href="Etapa1.html">Primera etapa: Anteproyecto <span>Ver el diagnóstico, los objetivos, el diseño inicial y los avances documentados →</span></a>
+  </div>
+</section>
+</main>
+<footer>
+  <strong>CELLGUARD | Proyecto de Promoción</strong>
+  <p>C.E.D. Miguela Rodríguez Araujo · Bachillerato Técnico en Informática</p>
+  <p>Portafolio digital de seguimiento del proyecto</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Primera etapa del proyecto CellGuard: anteproyecto, diagnóstico y diseño inicial.">
+<title>CellGuard | Primera etapa</title>
+<style>
+:root{--navy:#102a56;--blue:#1769d2;--sky:#eaf3ff;--ink:#172b4d;--muted:#53657e;--white:#fff;--bg:#f5f8fc;--line:#d8e3f0;--shadow:0 10px 25px rgba(16,42,86,.08)}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:var(--blue);font-weight:700}
+a:focus-visible{outline:3px solid #ffbf47;outline-offset:3px}
+.container{width:min(1000px,91%);margin:auto}
+header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:5;box-shadow:0 4px 15px #071a3540}
+.navbar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:17px 0}
+.brand{font-size:1.4rem;font-weight:800;color:#fff;text-decoration:none}
+.brand span{color:#8fc5ff}
+nav{display:flex;gap:7px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;padding:8px 10px;border-radius:7px;font-size:.9rem}
+nav a:hover{background:#28518a}
+.hero{background:linear-gradient(130deg,#102a56,#1769d2);color:#fff;padding:52px 0}
+.eyebrow{color:#b9dcff;font-size:.8rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+h1{font-size:clamp(2rem,4vw,3rem);line-height:1.2;margin:10px 0}
+.hero p{color:#e4efff;max-width:780px}
+main{padding:36px 0 65px}
+.intro{color:var(--muted);margin:0 0 25px}
+section{background:#fff;border:1px solid var(--line);border-radius:13px;padding:25px;margin:18px 0;box-shadow:var(--shadow);scroll-margin-top:92px}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:12px}
+h3{color:var(--blue);margin:15px 0 7px}
+p{color:var(--muted);margin:7px 0}
+ul{padding-left:22px;color:var(--muted)}
+li{margin:7px 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+.mini{background:var(--sky);padding:17px;border-radius:10px}
+.mini h3{margin:0 0 5px}
+.pill{display:inline-block;background:#e4f0ff;color:#104d9e;padding:5px 10px;border-radius:30px;font-size:.82rem;font-weight:800;margin:4px 5px 4px 0}
+.callout{border-left:5px solid var(--blue);background:#f2f7ff;padding:16px;border-radius:8px;margin-top:15px}
+.navback{display:inline-block;margin-top:12px;background:var(--navy);color:#fff;padding:11px 16px;border-radius:8px;text-decoration:none}
+footer{background:#0b1e3d;color:#fff;text-align:center;padding:25px 12px}
+footer p{color:#c8d8ed;font-size:.9rem}
+@media(max-width:650px){.navbar{justify-content:center}nav{justify-content:center}.grid{grid-template-columns:1fr}section{padding:19px}.hero{padding:40px 0}}
+</style>
+</head>
+<body>
+<header><div class="container navbar">
+  <a class="brand" href="index.html">CELL<span>GUARD</span></a>
+  <nav aria-label="Navegación de la etapa">
+    <a href="index.html">Inicio</a>
+    <a href="#descripcion">Descripción</a>
+    <a href="#problema">Problema</a>
+    <a href="#objetivos">Objetivos</a>
+    <a href="#diseno">Diseño</a>
+    <a href="#avances">Avances</a>
+  </nav>
+</div></header>
+<div class="hero"><div class="container">
+  <div class="eyebrow">Proyecto de Promoción · Primer año</div>
+  <h1>Primera etapa: Anteproyecto</h1>
+  <p>Diagnóstico de la necesidad, definición de la propuesta, análisis inicial de viabilidad y planificación de los componentes de CellGuard.</p>
+</div></div>
+<main class="container">
+<p class="intro">Esta página reúne los principales contenidos de la primera etapa documentada por el equipo. La construcción definitiva de la caja y la implementación funcional de la aplicación corresponden a etapas posteriores.</p>
+
+<section id="descripcion">
+<h2>1. Descripción de la etapa</h2>
+<p>Durante esta etapa se definieron las necesidades relacionadas con el almacenamiento de celulares y el registro de su entrega dentro de la institución. A partir del diagnóstico, se elaboró una propuesta que integra un sistema físico compartimentado y una aplicación complementaria.</p>
+<div class="grid" style="margin-top:16px">
+  <div class="mini"><h3>Componente físico</h3><p>Diseño conceptual de cajas con 30 compartimentos individuales, puerta frontal y acceso mediante lector de huellas digitales previsto.</p></div>
+  <div class="mini"><h3>Componente digital</h3><p>Planificación de una aplicación para gestionar alumnos por curso, asistencia y entrega o no entrega de celulares.</p></div>
+</div>
+</section>
+
+<section id="problema">
+<h2>2. Problema identificado</h2>
+<p>Se observó que los celulares se depositaban encimados en una caja común. Esta forma de almacenamiento puede provocar contacto y fricción entre dispositivos, con riesgo de rayaduras, roturas de pantallas y otros daños. También se identificó que el registro manual obliga a las coordinadoras a recorrer los cursos para verificar las entregas.</p>
+</section>
+
+<section id="objetivos">
+<h2>3. Objetivos</h2>
+<h3>Objetivo general de la caja fisica</h3>
+<p>Diseñar e implementar un sistema de almacenamiento compartimentado para dispositivos móviles que garantice la integridad física y funcional de los celulares de los estudiantes de la institución educativa, mitigando los daños por presión, compresión y degradación térmica durante la jornada escolar.</p>
+<h3>Objetivos específicos</h3>
+<ul>
+<li>Identificar los principales daños físicos y térmicos que pueden sufrir los celulares al ser almacenados de forma apilada.</li>
+<li>Determinar las características y necesidades del sistema, considerando la cantidad de dispositivos y el espacio disponible en la institución.</li>
+<li>Evaluar la viabilidad técnica, legal y económica mediante el análisis de materiales, costos y recursos necesarios.</li>
+<li>Diseñar una propuesta inicial del sistema, estableciendo su estructura, distribución y características principales.</li>
+<li>Documentar el diagnóstico, la propuesta de solución y las especificaciones iniciales mediante un anteproyecto formal.</li>
+<li>Desarrollar un sitio web para presentar la información del proyecto y registrar sus avances.</li>
+</ul>
+
+<h3>Objetivo general de la aplicación</h3>
+<p>Desarrollar una aplicación de registro y control de entrega de celulares que permita gestionar la lista de alumnos por curso, registrar su asistencia y controlar la frecuencia de entrega de sus dispositivos, identificando las inasistencias y los días en que estuvieron presentes sin entregar sus celulares.</p>
+<h3>Objetivos específicos</h3>
+<ul>
+<li>Organizar una base de datos con los alumnos, clasificados por curso, para facilitar su identificación y el seguimiento de sus registros.</li>
+<li>Implementar un sistema de registro diario que permita marcar la asistencia de los alumnos y confirmar la entrega o no entrega de sus celulares.</li>
+<li>Clasificar los registros según el estado de asistencia y entrega de cada alumno, diferenciando entre presentes, ausentes y presentes que no entregaron sus dispositivos.</li>
+<li>Generar reportes semanales que permitan visualizar la frecuencia de entrega de celulares y detectar los días en que los alumnos asistieron sin entregar sus dispositivos.</li>
+<li>Documentar el diagnóstico, la propuesta de solución y las especificaciones iniciales del proyecto mediante un anteproyecto formal.</li>
+<li>Desarrollar un sitio web para presentar la información del proyecto y registrar su avance durante las diferentes etapas.</li>
+</ul>
+
+</section>
+
+<section id="diseno">
+<h2>4. Diseño y materiales propuestos</h2>
+<p>Se proyecta una caja de plástico resistente con 30 espacios individuales, una puerta frontal y un sistema de acceso mediante lector de huellas digitales. El diseño busca mantener los dispositivos separados y organizados.</p>
+<div style="margin:12px 0">
+<span class="pill">30 celulares por caja</span><span class="pill">30 compartimentos</span><span class="pill">Puerta frontal</span><span class="pill">Lector biométrico previsto</span><span class="pill">Plástico resistente</span>
+</div>
+<h3>Materiales y componentes considerados</h3>
+<ul>
+<li>Plástico resistente para la estructura y los separadores.</li>
+<li>Lector de huellas digitales como mecanismo de identificación.</li>
+<li>Controlador y cerradura electrónica, previstos para una posible integración posterior.</li>
+<li>Herramientas de corte y ensamblaje para la construcción.</li>
+</ul>
+<p>La incorporación del mecanismo electrónico dependerá de las pruebas de funcionamiento, la compatibilidad de los componentes y la viabilidad económica.</p>
+</section>
+
+<section id="viabilidad">
+<h2>5. Estudio de viabilidad y presupuesto</h2>
+<div class="grid">
+<div class="mini"><h3>Técnica</h3><p>Se considera posible desarrollar progresivamente la caja y la aplicación con materiales, herramientas y tecnologías disponibles, realizando pruebas y ajustes, utilizando los recursos aprendidos.</p></div>
+<div class="mini"><h3>Legal</h3><p>El equipo no identificó inconvenientes legales para la propuesta dentro del ámbito escolar.</p></div>
+</div>
+<h3>Presupuesto de referencia</h3>
+<ul>
+<li>Una caja: Gs. 1.000.000, según presupuesto solicitado a Polypar.</li>
+<li>Seis cajas: Gs. 6.000.000.</li>
+<li>Dominio web estimado: Gs. 150.000 anuales.</li>
+<li>Hosting estimado: Gs. 330.000 anuales.</li>
+</ul>
+<div class="callout"><strong>Total preliminar: Gs. 6.480.000.</strong> Incluye seis estructuras y un año de dominio y alojamiento web. No incluye lectores de huellas, otros componentes electrónicos, instalación ni mantenimiento. El equipo estará realizando una investigación más extensa para ver otros presupuestos y materiales más economicos y viables para el proyecto, no siendo todavía este el presupuesto final</div>
+</section>
+
+<section id="avances">
+<h2>6. Avances realizados en la primera etapa</h2>
+<ul>
+<li>Reconocimiento de las necesidades relacionadas con el almacenamiento y el registro de celulares.</li>
+<li>Investigación de materiales viables y mecanismos de seguridad posibles.</li>
+<li>Definición de una propuesta de caja con compartimentos individuales.</li>
+<li>Análisis inicial de viabilidad técnica, legal y económica.</li>
+<li>Planificación de una aplicación complementaria para registrar asistencia y entrega.</li>
+<li>Elaboración del anteproyecto y desarrollo del sitio web de seguimiento.</li>
+</ul>
+<h3>Alcance de esta etapa</h3>
+<p>La primera etapa comprende el diagnóstico, la planificación, el diseño conceptual y la documentación. No contempla todavía la construcción del prototipo físico definitivo, la instalación funcional del lector biométrico ni la implementación completa de la aplicación.</p>
+</section>
+
+<section id="proyeccion">
+<h2>7. Continuidad del proyecto</h2>
+<div class="grid">
+<div class="mini"><h3>Segundo año</h3><p>Revisar el diseño, seleccionar materiales, construir el prototipo, desarrollar la aplicación y documentar el proceso con fotografías y registros.</p></div>
+<div class="mini"><h3>Tercer año</h3><p>Evaluar la capacidad, seguridad y funcionamiento; realizar mejoras; incorporar el lector de huellas si resulta viable y preparar la documentación final.</p></div>
+</div>
+<a class="navback" href="index.html">← Volver al portafolio principal</a>
+</section>
+</main>
+<footer><strong>CELLGUARD | Primera etapa: Anteproyecto</strong><p>C.E.D. Miguela Rodríguez Araujo · 1.º BATÍN – Extendido</p></footer>
+</body>
+</html>
